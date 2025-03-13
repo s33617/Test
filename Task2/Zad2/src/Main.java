@@ -26,11 +26,11 @@ public class Main {
         if (wiek >= 10 && wiek <18){
             znizka = znizka + 50;
         }
-        if (znizka > 100) {
-            System.out.println("Bilet jest darmowy");
+        if (znizka >= 100) {
+            System.out.println("Dane: " + miejsce + ", " + wiek + "lat, dzień tygodnia: " + dzien + ", Cena biletu: bezpłatny, Rabat: 100%");
         } else {
-            int nowacena = cenastartowa*((100-znizka)/100);
-            System.out.println("Cena biletu wynosi: " + nowacena);
+            double nowacena = cenastartowa* (100.00 - znizka) /100.00;
+            System.out.println("Dane: " + miejsce + ", " + wiek + "lat, dzień tygodnia: " + dzien + ", Cena biletu: " + nowacena + " PLN, Rabat: " + znizka + "%");
         }
 
     }
